@@ -43,6 +43,10 @@ import { Animate, withControl } from 'styled-animate';
 
 const Controlled = withControl(
     styled.div`
+        background-color: blue;
+        height: 60px;
+        margin: 16px;
+        width: 120px;
         ${Animate}
     `
 );
@@ -78,6 +82,10 @@ import { Animate, withReveal } from 'styled-animate';
 
 const Revealed = withReveal(
     styled.div`
+        background-color: red;
+        height: 60px;
+        margin: 16px;
+        width: 120px;
         ${Animate}
     `
 );

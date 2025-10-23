@@ -1,6 +1,6 @@
 {
     "name": "@chrismiddle10/styled-animate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "This library provides an implementation of [Animate.css](https://animate.style/) and [Wow.js](https://wowjs.uk/) for ReactJS & styled-components.",
     "main": "out/index.js",
     "scripts": {},

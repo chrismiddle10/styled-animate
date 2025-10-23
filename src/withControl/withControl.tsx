@@ -3,7 +3,7 @@ import { convertAnimations } from '../func';
 import { ControlProps, ControlRef } from './withControl.type';
 
 export function withControl<CmpProps>( Cmp: React.ComponentType<CmpProps & ControlProps> ) {
-    return React.forwardRef<ControlRef, CmpProps & ControlProps & React.HTMLProps<HTMLElement>>( ( props, forwarded ) => {
+    return React.forwardRef<ControlRef, Omit<CmpProps, '$animate'> & ControlProps & React.HTMLProps<HTMLElement>>( ( props, forwarded ) => {
         const {
             $animate,
             onAnimationEnd,

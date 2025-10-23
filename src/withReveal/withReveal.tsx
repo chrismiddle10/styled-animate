@@ -3,7 +3,7 @@ import { convertAnimations, convertReveal } from '../func';
 import { RevealProps } from './withReveal.type';
 
 export function withReveal<CmpProps>( Cmp: React.ComponentType<CmpProps & RevealProps> ) {
-    return React.forwardRef<HTMLElement, CmpProps & RevealProps & React.HTMLProps<HTMLElement>>( ( props, forwarded ) => {
+    return React.forwardRef<HTMLElement, Omit<CmpProps, '$animate' | '$reveal'> & RevealProps & React.HTMLProps<HTMLElement>>( ( props, forwarded ) => {
         const {
             $animate,
             $reveal,

@@ -1,7 +1,6 @@
 # styled-animate
 
-> This library provides an implementation of [Animate.css](https://animate.style/) and [Wow.js](https://wowjs.uk/) for ReactJS & styled-components.
-> It is not at 100% parity with the aforementioned projects. It is, however, very close and does provide some additional features as well.
+> Using React.js & styled-components, this library provides an implementation of Animate.css plus some additional utilities inspired by Wow.js.
 
 ## Examples
 
@@ -13,9 +12,7 @@ This is a mixin that, when used alone, triggers its configured animation immedia
 import styled from 'styled-components';
 import { Animate } from 'styled-animate';
 
-const Animated = styled.div`
-    ${Animate}
-`;
+const Animated = styled.div`${Animate}`;
 
 export function Component( props: unknown ) {
     const controlled = React.useRef();
@@ -41,15 +38,13 @@ This is a higher-order component that allows for starting & stopping its configu
 import styled from 'styled-components';
 import { Animate, withControl } from 'styled-animate';
 
-const Controlled = withControl(
-    styled.div`
-        background-color: blue;
-        height: 60px;
-        margin: 16px;
-        width: 120px;
-        ${Animate}
-    `
-);
+const Controlled = withControl( styled.div`
+    background-color: blue;
+    height: 60px;
+    margin: 16px;
+    width: 120px;
+    ${Animate}
+` );
 
 export function Component( props: unknown ) {
     const controlled = React.useRef();
@@ -80,15 +75,13 @@ This is a higher-order component that waits for starting its configured animatio
 import styled from 'styled-components';
 import { Animate, withReveal } from 'styled-animate';
 
-const Revealed = withReveal(
-    styled.div`
-        background-color: red;
-        height: 60px;
-        margin: 16px;
-        width: 120px;
-        ${Animate}
-    `
-);
+const Revealed = withReveal( styled.div`
+    background-color: red;
+    height: 60px;
+    margin: 16px;
+    width: 120px;
+    ${Animate}
+` );
 
 export function Component( props: unknown ) {
     const [element, setElement] = React.useState<HTMLElement>();

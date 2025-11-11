@@ -1,6 +1,6 @@
 # styled-animate
 
-> Using React.js & styled-components, this library provides an implementation of Animate.css plus some additional utilities inspired by Wow.js.
+Using React.js & styled-components, this library provides an implementation of Animate.css plus some additional utilities inspired by Wow.js.
 
 ## Examples
 
@@ -9,6 +9,7 @@
 This is a mixin that, when used alone, triggers its configured animation immediately.
 
 ```jsx
+import React from 'react';
 import styled from 'styled-components';
 import { Animate } from 'styled-animate';
 
@@ -35,6 +36,7 @@ export function Component( props: unknown ) {
 This is a higher-order component that allows for starting & stopping its configured animations on-demand.
 
 ```jsx
+import React from 'react';
 import styled from 'styled-components';
 import { Animate, withControl } from 'styled-animate';
 
@@ -72,6 +74,7 @@ export function Component( props: unknown ) {
 This is a higher-order component that waits for starting its configured animations until the element is made visible within the viewport.
 
 ````jsx
+import React from 'react';
 import styled from 'styled-components';
 import { Animate, withReveal } from 'styled-animate';
 
